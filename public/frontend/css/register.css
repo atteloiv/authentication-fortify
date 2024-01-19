@@ -1,0 +1,268 @@
+@font-face {
+    font-family: "Harmattan";
+    src: url(/frontend/font/Harmattan-Medium.ttf) format("truetype");
+  }
+@font-face {
+    font-family: "Gupter";
+    src: url(/frontend/font/Gupter-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Heebo";
+    src: url(/frontend/font/Heebo-Medium.ttf) format("truetype");
+}
+body {
+    background: -webkit-linear-gradient(right,  #EBA3CC 0%,#b8adeb 50%,#E9E4FF 50%); /* Chrome10+,Safari5.1+ */
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: #E9E4FF;
+    background: -webkit-linear-gradient(right,  #EBA3CC 0%,#b8adeb 50%,#E9E4FF 50%); /* Chrome10+,Safari5.1+ */
+}
+.form-box {
+    width: 558px;
+    flex-shrink: 0;
+    border-radius: 30px 0px 0px 30px;
+    background: #F6F4FF;
+    box-shadow: 0px 0px 59px 10px rgba(255, 255, 255, 0.20) inset, 4px 4px 4px 0px rgba(156, 156, 156, 0.25);
+    height: 666px;
+    z-index: 50;
+}
+.img-box {
+    display: inline-flex;
+    width: 558px;
+    height: 666px;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+    flex-shrink: 0;
+    border-radius: 0px 30px 30px 0px;
+    background: rgba(255, 255, 255, 0.21);
+    box-shadow: 0px 0px 59px 10px rgba(255, 255, 255, 0.20) inset;
+    z-index: 50;
+}
+.form-box h2 {
+    color: #000;
+    text-align: center;
+    font-family: Gupter;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px; /* 92.105% */
+    letter-spacing: 0.76px;
+    text-transform: capitalize;
+}
+.img-box h2 {
+    margin-left: 50px;
+    margin-top: 56px;
+    color: #FFF;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Heebo;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+.img-box h3 {
+    margin-left: 50px;
+    margin-top: -50px;
+    color: #FFF;
+    text-edge: cap;
+    font-family: Heebo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 120% */
+    text-transform: capitalize;
+    leading-trim: both;
+}
+.inputbox {
+    position: relative;
+    margin: 30px -20px;
+    width: 310px;
+}
+.inputbox label {
+    position: absolute;
+    margin-top: 10px;
+    top: -7%;
+    left: 73px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    color: #000;
+    font-family: Harmattan;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+.inputbox input {
+    margin-left: 73px;
+    margin-top: 20px;
+    height: 50px;
+    width: 380px;
+    border: none;
+    padding-left: 25px;
+    font-size: 18px;
+    border-radius: 2px/2px;
+    flex-shrink: 0;
+    background: #FDFDFD;
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.12);
+    font-size: 22px;
+    font-family: Gupter;
+}
+.inputbox input:focus {
+    outline: none;
+    border: 2px solid #BBB1EC;
+}
+.forgot label a{
+    margin-left: 124px;
+    width: 380px;
+    color: #EC6DB5;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: capitalize;
+    font-family: Heebo;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.button input {
+    position: fixed;
+    margin-top: 20px;
+    margin-left: 95px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #CB4C96;
+    padding: 15px 110px;
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 66.667% */
+    text-transform: capitalize;
+    font-family: Heebo;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+.button input:hover {
+    transform: scale(1.05);
+}
+.register p {
+    position: fixed;
+    margin-top: 85px;
+    margin-left: 113px;
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 100% */
+    text-transform: capitalize;
+    font-family: Heebo;
+}
+.register a {
+    text-align: center;
+    color: #EE86C3;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: capitalize;
+    font-family: Heebo;
+    text-decoration: none;
+}
+.invalid-feedback {
+    position: relative;
+    top: 10px;
+    left: 73px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #CB4C96;
+    font-family: Harmattan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+.ellipse_4 {
+    position: fixed;
+    top: -70px;
+    left: -30px;
+    width: 266.618px;
+    height: 317.971px;
+    transform: rotate(-30deg);
+    flex-shrink: 0;
+    border-radius: 317.971px;
+    background: #BBB1EC;
+
+    animation-duration: 4s;
+    animation-name: ellipse_4_animation;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.ellipse_5 {
+    position: fixed;
+    bottom: -100px;
+    left: -130px;
+    width: 378.912px;
+    height: 362.694px;
+    transform: rotate(-30deg);
+    flex-shrink: 0;
+    border-radius: 378.912px;
+    border: 60px solid #EBA3CC;
+
+    animation-duration: 3s;
+    animation-name: ellipse_5_animation;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.heart {
+    position: absolute;
+    width: 360px;
+    height: 400px;
+    flex-shrink: 0;
+    background: url(/frontend/img/heart.png) 50%/contain no-repeat;
+    z-index: 51;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 700px;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scaleX(-1);
+}
+@keyframes ellipse_4_animation {
+    0% {
+        height: 317.971px;
+        bottom: -100px;
+        right: -30px;
+    }
+    100% {
+        height: 250.971px;
+        bottom: 10px;
+        right: 30px;
+    }
+
+  }
+
+  @keyframes ellipse_5_animation {
+    0% {
+        height: 317.971px;
+        bottom: -100px;
+    }
+    100% {
+        height: 250.971px;
+        bottom: 100px;
+    }
+  }
