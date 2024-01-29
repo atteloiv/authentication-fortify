@@ -1,66 +1,46 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Authentication fortify
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Laravel Fortify** – это независимая от внешнего интерфейса серверная реализация аутентификации для Laravel. Fortify регистрирует маршруты и контроллеры, необходимые для реализации всего функционала аутентификации Laravel, включая вход в систему, регистрацию, сброс пароля, подтверждение электронной почты и двухфакторную аутентификацию.
 
-## About Laravel
+<img src="public/image.png" width="500">
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[Дизайн](<https://www.figma.com/file/fHAYWjmjN95JnQ7J8NbC03/Registration-page-(Community)?type=design&node-id=0-1&mode=design&t=YHnSeQqlPHzEAFcl-0>)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Дополнительная документация
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   [Пакет Laravel Fortify](https://laravel.com/docs/10.x/fortify)
 
-## Learning Laravel
+## Установка
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Клонируйте репозиторий `git clone https://github.com/atteloiv/authentication-fortify.git`
+2. Перейдите в папку склонированного репозитория.
+3. Установите composer `composer install`
+4. Создайте новый файл конфигурации на основе .env.example `cp .env.example .env`
+5. Сгенерируйте уникальный ключ `php artisan key:generate`
+6. Настройте базу данных в файле .env в корне проекта:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```
+DB_CONNECTION="тип используемого соединения"
+DB_HOST="имя хоста или IP-адрес сервера"
+DB_PORT="номер порта"
+DB_DATABASE="имя БД"
+DB_USERNAME="имя пользователя"
+DB_PASSWORD="пароль"
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+7.  Запустите миграцию базы данных `php artisa migrate`
 
-## Laravel Sponsors
+8.  Настройте систему электронной почты в файле .env в корне проекта:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```
+MAIL_MAILER="драйвер почтовой программы"
+MAIL_HOST="имя хоста или IP-адрес сервера"
+MAIL_PORT="номер порта"
+MAIL_USERNAME="имя пользователя"
+MAIL_PASSWORD="пароль"
+MAIL_ENCRYPTION="метод шифрования"
+MAIL_FROM_ADDRESS="адрес электронной почты отправителя"
+MAIL_FROM_NAME="имя отправителя"
+```
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+9. Запустите веб-сервер `php artisan serve`
