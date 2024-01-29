@@ -13,7 +13,7 @@
 ## Установка
 
 1. Клонируйте репозиторий `git clone https://github.com/atteloiv/authentication-fortify.git`
-2. Перейдите в папку склонированного репозитория.
+2. Перейдите в папку склонированного репозитория
 3. Установите composer `composer install`
 4. Создайте новый файл конфигурации на основе .env.example `cp .env.example .env`
 5. Сгенерируйте уникальный ключ `php artisan key:generate`
